@@ -1,0 +1,8 @@
+${ACME_SCRIPT_PATH} \
+  --dns ${ACME_DNS} \
+  -d ${ACME_DOMAIN} -d "*.${ACME_DOMAIN}" \
+  --cert-file ${ACME_CERTS_DIR}/${ACME_DOMAIN}.cer \
+  --key-file ${ACME_CERTS_DIR}/${ACME_DOMAIN}.key \
+  --ca-file ${ACME_CERTS_DIR}/ca.cer \
+  --fullchain-file ${ACME_CERTS_DIR}/fullchain.cer \
+  "$@"
