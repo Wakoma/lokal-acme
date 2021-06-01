@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
 ${ACME_SCRIPT_PATH} \
   --dns ${ACME_DNS} \
   -d ${ACME_DOMAIN} -d "*.${ACME_DOMAIN}" \
